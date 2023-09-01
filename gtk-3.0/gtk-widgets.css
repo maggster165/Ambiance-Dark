@@ -497,9 +497,8 @@ row:selected {
     border-top-color: shade (@selected_bg_color, 0.88);
     border-style: solid;
     border-width: 1px 0 0 0;
-
-    /*text-shadow: 0 -1px shade (@selected_bg_color, 0.7);*/
 }
+
 
 row:selected:backdrop {
     background-image: -gtk-gradient (linear, left bottom, left top,
@@ -2106,11 +2105,12 @@ GtkTextView {
     padding: 3px 4px 4px 4px;
 }
 
-.inline-toolbar.toolbar .button {
+.inline-toolbar.toolbar button {
     padding: 4px;
 
-    icon-shadow: 0 1px shade (@bg_color, 1.16);
+    -gtk-icon-shadow: 0 1px shade (@bg_color, 1.16);
 }
+
 
 /* Middle button */
 .inline-toolbar.toolbar .button,
