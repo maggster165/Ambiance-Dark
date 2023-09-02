@@ -592,6 +592,17 @@ combobox {
 	text-shadow: 0 1px @button_text_shadow;
 }
 
+GtkComboBox.combobox-entry .button:disabled,
+.primary-toolbar GtkComboBox.combobox-entry .button:disabled,
+.menubar.toolbar GtkComboBox.combobox-entry .button:disabled,
+.header-bar GtkComboBox.combobox-entry .button:disabled,
+.entry:disabled {
+    background-color: #4F4F4F;
+    background-image: none;
+
+    color: mix (@text_color, @base_color, 0.4);
+}
+
 combobox:disabled {
 	 background-color: #4F4F4F;
     background-image: none;
@@ -3494,6 +3505,7 @@ headerbar separator {
 /***********
  * tooltip *
  ***********/
+
 tooltip {
     background-image: -gtk-gradient (radial, center 0, 0, center 0, 0.8,
                                      from (alpha (mix (@tooltip_bg_color, #ffffff, 0.2), 0.86)),
@@ -3876,7 +3888,7 @@ undershoot {
 
 .dim-label,
 *:disabled {
-    color: shade (@bg_color, 0.6);
+    color: shade (@bg_color, 2.1);
     text-shadow: 0 1px alpha (shade (@bg_color, 1.25), 0.5);
     -gtk-icon-effect: dim;
 }

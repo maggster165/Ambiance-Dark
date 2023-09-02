@@ -40,7 +40,10 @@ entry:focus {
 
 spinbutton:disabled,
 entry:disabled {
-    border-image: -gtk-scaled(url("assets/entry-disabled.png"),url("assets/entry-disabled@2.png")) 10 12 10 12 / 10px 12px 10px 12px stretch;
+    background-color: #4F4F4F;
+    background-image: none;
+
+    color: mix (@text_color, @base_color, 0.4);
 }
 
 spinbutton:disabled:backdrop,
